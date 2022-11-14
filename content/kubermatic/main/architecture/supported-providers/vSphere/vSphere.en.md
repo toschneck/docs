@@ -378,8 +378,8 @@ shared management interface.
 In KKP *Datastores* are used for two purposes:
 - Storing the VMs files for the worker nodes of vSphere user clusters.
 - Generating the vSphere cloud provider storage configuration for user clusters.
-    In particular to provide the `dafault-datastore` value, that is the default
-    datastore for dynamic volume provisioning.
+  In particular to provide the `dafault-datastore` value, that is the default
+  datastore for dynamic volume provisioning.
 
 *Datastore Clusters* can only be used for the first purpose as it cannot be
 specified directly in [vSphere cloud configuration][vsphere-cloud-config].
@@ -388,13 +388,13 @@ There are two places where Datastores and Datastore Clusters can be configured
 in KKP
 
 - At datacenter level (either with [Seed CRD]({{< ref "../../../tutorials-howtos/project-and-cluster-management/seed-cluster" >}})
-    or [datacenters.yaml]({{< ref "../../../tutorials-howtos/project-and-cluster-management/seed-cluster" >}})) is possible to
-    specify the default *Datastore* that will be used for user clusters dynamic
-    volume provisioning and workers VMs placement in case no *Datastore* or
-    *Datastore Cluster* is specified at cluster level.
+  or [datacenters.yaml]({{< ref "../../../tutorials-howtos/project-and-cluster-management/seed-cluster" >}})) is possible to
+  specify the default *Datastore* that will be used for user clusters dynamic
+  volume provisioning and workers VMs placement in case no *Datastore* or
+  *Datastore Cluster* is specified at cluster level.
 - At *Cluster* level it is possible to provide either a *Datastore* or a
-    *Datastore Cluster* respectively with `spec.cloud.vsphere.datastore` and
-    `spec.cloud.vsphere.datastoreCluster` fields.
+  *Datastore Cluster* respectively with `spec.cloud.vsphere.datastore` and
+  `spec.cloud.vsphere.datastoreCluster` fields.
 
 {{% notice warning %}}
 At the moment of writing this document *Datastore and *Datastore Cluster*
